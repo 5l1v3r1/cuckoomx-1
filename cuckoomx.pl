@@ -180,13 +180,13 @@ sub getPackage {
 	my $f = shift || return("");
 	my $flm = File::LibMagic->new();
 	my $b = $flm->describe_filename("$f");
-	if ( $b =~ /Microsoft [Office ]*PowerPoint/i ) {
+	if ( $b =~ /Microsoft (Office )*PowerPoint/i ) {
 		return("ppt");
 	}
-	elsif ( $b =~ /Microsoft [Office ]*Excel/i ) {
+	elsif ( $b =~ /Microsoft (Office )*Excel/i ) {
 		return("xls");
 	}
-	elsif ($b =~ /Microsoft [Office ]*Word/i ||
+	elsif ($b =~ /Microsoft (Office )*Word/i ||
 	    $b =~ /Composite Document File V\d Document/i	 ||
 	    $b =~ /Rich Text Format/i) {
 		return("doc");
