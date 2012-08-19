@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env -i perl
 # CuckooMX.pl
 # Content-filter for the Postfix MTA which submit attached documents to a
 # Cuckoo instance for automatic analysis.
